@@ -16,7 +16,7 @@ class TPQueue {
   int len;
   PTR* head;
   PTR* tail;
- 
+
  public:
   TPQueue() {
     len = 0;
@@ -28,8 +28,6 @@ class TPQueue {
     newptr->data = newsym;
     int i = 0;
     if (len == 0) {
-      newptr->frv = nullptr;
-      newptr->back = nullptr;
       head = newptr;
       tail = newptr;
       len = 1;
@@ -71,7 +69,6 @@ class TPQueue {
     PTR* del = head;
     len--;
     head = head->frv;
-    head->back = nullptr;
     SYM bufdata = *del->data;
     delete del->data;
     delete del;
