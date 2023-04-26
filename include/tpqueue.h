@@ -2,7 +2,7 @@
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 struct SYM {
-  char c;
+  char ch;
   int prior;
 } Elem;
 template <typename T>
@@ -16,7 +16,7 @@ class TPQueue {
   int len;
   PTR* head;
   PTR* tail;
-  
+ 
  public:
   TPQueue() {
     len = 0;
